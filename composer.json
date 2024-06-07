@@ -1,0 +1,41 @@
+{
+  "name": "oscar-team/avatax-laravel",
+  "description": "A Laravel package for Avalara AvaTax SDK integration",
+  "type": "library",
+  "require": {
+    "php": ">=7.3",
+    "illuminate/support": "^7.0|^8.0|^9.0|^10.0|^11.0",
+    "avalara/avataxclient": "^21.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "OscarTeam\\AvaTax\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MyPackage\\AvaTax\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "OscarTeam\\AvaTax\\AvaTaxServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Your Name",
+      "email": "your.email@example.com"
+    }
+  ],
+  "scripts": {
+    "post-autoload-dump": [
+      "@php artisan package:discover --ansi"
+    ]
+  }
+}
