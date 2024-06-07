@@ -12,12 +12,12 @@ class AvaTaxServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/avatax.php', 'avatax');
 
         $this->app->singleton(AvaTaxClient::class, function ($app) {
-            $appName = config('avalara.app_name');
-            $appVersion = config('avalara.app_version');
-            $machineName = config('avalara.machine_name');
-            $environment = config('avalara.environment');
-            $username = config('avalara.account_id');
-            $password = config('avalara.license_key');
+            $appName = config('avatax.app_name');
+            $appVersion = config('avatax.app_version');
+            $machineName = config('avatax.machine_name');
+            $environment = config('avatax.environment');
+            $username = config('avatax.account_id');
+            $password = config('avatax.license_key');
 
             $client = new AvaTaxClient($appName, $appVersion, $machineName, $environment);
             $client->withSecurity($username, $password);
