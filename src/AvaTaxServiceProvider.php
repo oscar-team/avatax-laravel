@@ -16,11 +16,11 @@ class AvaTaxServiceProvider extends ServiceProvider
             $appVersion = config('avatax.app_version');
             $machineName = config('avatax.machine_name');
             $environment = config('avatax.environment');
-            $username = config('avatax.account_id');
-            $password = config('avatax.license_key');
+            $accountId = config('avatax.account_id');
+            $licenseKey = config('avatax.license_key');
 
             $client = new AvaTaxClient($appName, $appVersion, $machineName, $environment);
-            $client->withSecurity($username, $password);
+            $client->withLicenseKey($accountId, $licenseKey);
             return $client;
         });
 

@@ -362,9 +362,6 @@ use Illuminate\Support\Facades\Facade;
  * @method static registerShipment($companyCode, $transactionCode, $documentType)
  * @method static registerShipmentIfCompliant($companyCode, $transactionCode, $documentType)
  * @method static verifyShipment($companyCode, $transactionCode, $documentType)
- * @method static withSecurity($username, $password)
- * @method static withLicenseKey($accountId, $licenseKey)
- * @method static withBearerToken($bearerToken)
  * @method static withCatchExceptions($catchExceptions = true)
  * @method static getClient()
  *
